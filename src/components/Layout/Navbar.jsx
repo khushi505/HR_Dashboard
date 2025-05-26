@@ -55,7 +55,7 @@ export default function Navbar() {
             onClick={() => router.push("/bookmarks")}
             className="px-3 py-1 rounded bg-blue-600 text-white hover:bg-blue-700 text-sm"
           >
-            Bookmarks ({bookmarks.length})
+            ({bookmarks.length}) Bookmarks
           </button>
 
           <button
