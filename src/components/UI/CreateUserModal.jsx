@@ -42,7 +42,7 @@ export default function CreateUserModal({ isOpen, onClose }) {
     };
 
     addUser(newUser);
-    onClose(); // close modal
+    onClose();
   };
 
   if (!isOpen) return null;

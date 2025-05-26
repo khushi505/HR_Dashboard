@@ -22,7 +22,6 @@ export default function HomePage() {
     filteredUsers,
   } = useSearch(users);
 
-  // ✅ Pagination state
   const USERS_PER_PAGE = 6;
   const [currentPage, setCurrentPage] = useState(1);
 
