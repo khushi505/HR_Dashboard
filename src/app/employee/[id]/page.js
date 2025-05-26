@@ -1,18 +1,21 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
 import {
   generateMockBio,
   generateMockPerformanceHistory,
 } from "@/lib/mockUtils";
 import Tabs from "@/components/UI/Tabs";
 
-export default function EmployeeDetail({ params }) {
+export default function EmployeeDetail() {
+  const { id } = useParams();
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`https://dummyjson.com/users/${params.id}`)
+    if (!id) return;
+    fetch(`https://dummyjson.com/users/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setUser({
@@ -22,7 +25,7 @@ export default function EmployeeDetail({ params }) {
         });
         setLoading(false);
       });
-  }, [params.id]);
+  }, [id]);
 
   if (loading) return <p className="p-6">Loading...</p>;
   if (!user) return <p>User not found</p>;
@@ -36,7 +39,7 @@ export default function EmployeeDetail({ params }) {
         <strong>Phone:</strong> {user.phone}
       </p>
       <p>
-        <strong>Address:</strong> {user.address.address}, {user.address.city}
+        <strong>Address:</strong> {user.address?.address}, {user.address?.city}
       </p>
       <p>
         <strong>Bio:</strong> {user.bio}
@@ -68,7 +71,7 @@ export default function EmployeeDetail({ params }) {
         {user.firstName} {user.lastName}
       </h1>
       <p className="text-gray-600 mb-2">
-        Age {user.age}, {user.company.department}
+        Age {user.age}, {user.company?.department}
       </p>
 
       <Tabs
