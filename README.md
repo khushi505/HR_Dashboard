@@ -96,6 +96,22 @@ Visit: http://localhost:3000
 
 ## Demo Photos
 
+```
+1. NextAuth Login
+2. HR Dashboard
+3. Search By Name
+4. Bookmarked Employee
+5. Analytics Page
+6. Create User
+7. Filter By Department
+8. MultiFilter By Departments
+9. Filter By Rating
+10. MultiFilter By Ratings
+11. MultiFiter By Departments and Ratings
+12. Promoted Employee
+13. Pagination
+```
+
 ### 1. NextAuth Login
 
 ![Screenshot 2025-05-26 224150](https://github.com/user-attachments/assets/9c8ea037-5aad-4cef-bc89-6818b7593d37)
