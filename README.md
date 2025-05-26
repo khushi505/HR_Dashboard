@@ -95,7 +95,5 @@ Visit: http://localhost:3000
 
 ## Demo Video 
 
-https://github.com/user-attachments/assets/c3f93d90-2680-4057-a941-cad4a46b9e48
-
-
+https://github.com/user-attachments/assets/49e77141-f366-44b4-bc2f-5025bda7a065
 
