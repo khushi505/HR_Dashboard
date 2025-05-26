@@ -66,7 +66,7 @@ export default function EmployeeDetail() {
   );
 
   return (
-    <main className="p-6 max-w-2xl mx-auto bg-white shadow rounded-lg">
+    <main className=" max-w-xl mx-auto mt-10 bg-white text-black dark:bg-gray-800 dark:text-white p-6 rounded-md shadow-md">
       <h1 className="text-2xl font-bold mb-1">
         {user.firstName} {user.lastName}
       </h1>
