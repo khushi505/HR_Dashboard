@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🧑‍💼 HR Dashboard
+
+A modern HR management dashboard built with **Next.js 15 (App Router)**, **Tailwind CSS**, **Zustand**, and **NextAuth.js**. This dashboard supports employee search, filter, bookmarking, analytics visualization, theme toggling, user creation, and route protection via authentication.
+
+
+
+##  Features
+
+1. **Login/Logout with NextAuth.js**
+2. **Protected Routes** (Bookmarks, Create User, Analytics)
+3. **Dark/Light Mode** (persistent with `localStorage`)
+4. **View & Filter Employees**
+5. Filter by **Department** or **Performance Rating**
+6. Live **search** across name, email, and department
+7. **Bookmark Employees** (Persistent with `localStorage` using Zustand)
+8. **Create New Users** (Modal with **form validation**)
+9. **Analytics Page** (Charts (Bar, Line) to visualize data)
+10. **Pagination** for employees
+9. **Detailed Employee Page** (Tabs: Overview, Projects, Feedback)
+
+
+
+##  Tech Stack
+
+- **Frontend**: Next.js 15 App Router, Tailwind CSS
+- **State Management**: Zustand
+- **Auth**: NextAuth.js (credentials-based)
+- **Charting**: Chart.js (react-chartjs-2)
+- **UI Enhancements**: Custom Modals, Dark Mode, Responsive Grid
+
+
+
+##  Demo Credentials
+
+```
+admin@gmail.com
+123456
+```
+
+## Folder Structure
+
+```
+src/
+├── app/
+│ ├── analytics/
+│ ├── bookmarks/
+│ ├── employee/[id]/
+│ ├── login/
+│ ├── api/auth/[...nextauth]/route.js
+├── components/
+│ ├── Card/ → UserCard.jsx
+│ ├── Charts/ → Chart components
+│ ├── UI/ → MultiSelect, Tabs, Button, Modal
+| ├── Layout/ → Navbar
+├── store/ → Zustand (bookmark store)
+├── hooks/ → useSearch, useFetchUsers
+├── lib/ → authOptions
+```
 
 ## Getting Started
 
-First, run the development server:
+### 1. Clone Repo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+git clone https://github.com/your-username/hr-dashboard.git
+cd hr-dashboard
+```
+### 2. Install Dependencies
+
+```
+npm install
+```
+### 3. Set Environment Variables
+
+Create a .env.local file:
+```
+NEXTAUTH_SECRET=your-secret-key
+NEXTAUTH_URL=http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Generate a strong secret:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
+openssl rand -base64 32
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 4. Run the App
 
-## Learn More
+```
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Visit: http://localhost:3000
