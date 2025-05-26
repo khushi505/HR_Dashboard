@@ -1,5 +1,4 @@
 
-https://github.com/user-attachments/assets/d7716720-f421-4a42-adee-8a9c766b0b16
 # 🧑‍💼 HR Dashboard
 
 A modern HR management dashboard built with **Next.js 15 (App Router)**, **Tailwind CSS**, **Zustand**, and **NextAuth.js**. This dashboard supports employee search, filter, bookmarking, analytics visualization, theme toggling, user creation, and route protection via authentication.
