@@ -110,6 +110,8 @@ Visit: http://localhost:3000
 11. MultiFiter By Departments and Ratings
 12. Promoted Employee
 13. Pagination
+14. Employee Profile
+15. Light Mode Theme 
 ```
 
 ### 1. NextAuth Login
@@ -166,6 +168,13 @@ Visit: http://localhost:3000
 
 ![Screenshot 2025-05-26 225306](https://github.com/user-attachments/assets/3c81fbac-779a-46ce-9911-e8a1aaa1be67)
 
+### 14. Employee Profile 
+
+![Screenshot 2025-05-26 225859](https://github.com/user-attachments/assets/fb33aaca-f10a-4c29-a5e7-11ab4263c578)
+
+### 15. Light Mode Theme
+
+![Screenshot 2025-05-26 225919](https://github.com/user-attachments/assets/9d9d4b5b-6d54-4122-ad63-8981b2a877ca)
 
 ## Demo Video 
 
