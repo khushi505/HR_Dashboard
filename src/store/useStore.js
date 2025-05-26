@@ -21,6 +21,10 @@ const useStore = create(
         set((state) => ({
           users: [user, ...state.users],
         })),
+      removeUser: (id) =>
+        set((state) => ({
+          users: state.users.filter((u) => u.id !== id),
+        })),
     }),
     {
       name: "hr-dashboard-storage", // single storage key

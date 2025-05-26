@@ -7,6 +7,8 @@ import Button from "../UI/Button";
 export default function UserCard({ user }) {
   const { bookmarks, addBookmark, removeBookmark } = useStore();
   const isBookmarked = bookmarks.some((u) => u.id === user.id);
+  const { removeUser } = useStore();
+  const isCustomUser = user.id.toString().length > 10;
 
   return (
     <div className="bg-white dark:bg-gray-800 text-black dark:text-white p-4 rounded-xl border border-blue-900 dark:border-gray-700 shadow-md hover:shadow-lg">
@@ -33,6 +35,11 @@ export default function UserCard({ user }) {
         <Button variant="primary" onClick={() => alert("Promoted ✅")}>
           Promote
         </Button>
+        {isCustomUser && (
+          <Button variant="danger" onClick={() => removeUser(user.id)}>
+            Delete
+          </Button>
+        )}
       </div>
     </div>
   );
