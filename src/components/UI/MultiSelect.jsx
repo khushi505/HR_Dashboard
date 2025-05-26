@@ -18,7 +18,7 @@ export default function MultiSelect({ label, options, selected, setSelected }) {
             className={`px-3 py-1 rounded-full text-sm border ${
               selected.includes(option)
                 ? "bg-blue-600 text-white border-blue-600"
-                : "bg-white border-gray-300"
+                : "bg-white dark:bg-gray-700 dark:text-white border-gray-300 dark:border-gray-600"
             }`}
           >
             {option}

@@ -1,33 +1,43 @@
-"use client";
+// "use client";
 
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
-export default function ThemeToggle() {
-  const [isDark, setIsDark] = useState(false);
+// export default function ThemeToggle() {
+//   const [isDark, setIsDark] = useState(false);
 
-  useEffect(() => {
-    const saved = localStorage.getItem("theme");
-    if (saved === "dark") {
-      document.documentElement.classList.add("dark");
-      setIsDark(true);
-    }
-  }, []);
+//   // Load theme preference on mount
+//   useEffect(() => {
+//     const savedTheme = localStorage.getItem("theme");
+//     if (savedTheme === "dark") {
+//       document.documentElement.classList.add("dark");
+//       setIsDark(true);
+//     } else {
+//       document.documentElement.classList.remove("dark");
+//       setIsDark(false);
+//     }
+//   }, []);
 
-  const toggleTheme = () => {
-    document.documentElement.classList.toggle("dark");
-    const theme = document.documentElement.classList.contains("dark")
-      ? "dark"
-      : "light";
-    localStorage.setItem("theme", theme);
-    setIsDark(theme === "dark");
-  };
+//   const toggleTheme = () => {
+//     const html = document.documentElement;
+//     const currentlyDark = html.classList.contains("dark");
 
-  return (
-    <button
-      onClick={toggleTheme}
-      className="px-3 py-1 rounded bg-gray-200 dark:bg-gray-700 text-sm text-black dark:text-white"
-    >
-      {isDark ? "🌞 Light Mode" : "🌙 Dark Mode"}
-    </button>
-  );
-}
+//     if (currentlyDark) {
+//       html.classList.remove("dark");
+//       localStorage.setItem("theme", "light");
+//       setIsDark(false);
+//     } else {
+//       html.classList.add("dark");
+//       localStorage.setItem("theme", "dark");
+//       setIsDark(true);
+//     }
+//   };
+
+//   return (
+//     <button
+//       onClick={toggleTheme}
+//       className="px-3 py-1 rounded bg-gray-200 dark:bg-gray-700 text-sm text-black dark:text-white"
+//     >
+//       {isDark ? "🌞 Light Mode" : "🌙 Dark Mode"}
+//     </button>
+//   );
+// }

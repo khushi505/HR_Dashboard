@@ -21,18 +21,18 @@ export default function HomePage() {
   const ratings = [1, 2, 3, 4, 5];
 
   return (
-    <main className="p-6">
+    <main className="min-h-screen p-6">
       {/* Search Input */}
       <input
         type="text"
         placeholder="Search by name, email, or department..."
-        className="w-full max-w-md px-4 py-2 mb-4 border rounded-md"
+        className="bg-white dark:bg-gray-800 text-black dark:text-white border rounded px-4 py-2"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
 
       {/* Filters */}
-      <div className="flex flex-col md:flex-row gap-4 mb-6">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-5 mb-6 ">
         <MultiSelect
           label="Filter by Department"
           options={departments}
@@ -51,7 +51,7 @@ export default function HomePage() {
       {loading ? (
         <p>Loading users...</p>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {filteredUsers.map((user) => (
             <UserCard key={user.id} user={user} />
           ))}
